@@ -12,6 +12,7 @@ struct PageView: View {
     var body: some View {
             if page.tag == 0{
                 ZStack{
+                    //shows the first image and the rectangle and text
                     Image("\(page.image)")
                         .resizable()
                         .scaledToFill()
@@ -33,6 +34,7 @@ struct PageView: View {
                     }
                 }
             } else{
+                //if it's not the first image, it just shows it ithout the styling
                 Image("\(page.image)")
                     .resizable()
                     .ignoresSafeArea()

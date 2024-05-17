@@ -24,6 +24,7 @@ struct Register: View {
                     Text("Enter username")
                         .frame(maxWidth: 360, alignment: .leading)
                         .padding()
+                    //Text field for username
                     TextField("", text: $inputUsername)
                         .frame(width: 360,height: 40)
                         .border(Color(red: 188/255, green: 137/255, blue: 136/255))
@@ -31,6 +32,7 @@ struct Register: View {
                     Text("Enter password")
                         .frame(maxWidth: 360, alignment: .leading)
                         .padding()
+                    //Text field for password
                     SecureField("", text: $inputPassword)
                         .frame(width: 360,height: 40)
                         .border(Color(red: 239/255, green: 211/255, blue: 219/255))
@@ -38,6 +40,7 @@ struct Register: View {
                     Text("Enter email")
                         .frame(maxWidth: 360, alignment: .leading)
                         .padding()
+                    //Text field for email
                     TextField(" ", text: $email)
                         .frame(width: 360,height: 40)
                         .border(Color(red: 183/255, green: 65/255, blue: 64/255))
@@ -45,17 +48,21 @@ struct Register: View {
                     Text("Country you reside in:")
                         .frame(maxWidth: 360, alignment: .leading)
                         .padding()
-                    
+                    //Text field for country
                     TextField(" ", text: $country)
                         .frame(width: 360,height: 40)
                         .border(Color(red: 215/255, green: 200/255, blue: 180/255))
                         .background(Color(red: 215/255, green: 200/255, blue: 180/255))
+                    Spacer()
+                    
+                    }
+                VStack {
+                    Spacer()
+                    //navigates to login page
                     NavigationLink(destination: Login(username: "", password: "").navigationBarBackButtonHidden()) {
                         Image("bow2")
-                            .frame(width: 200,height: 50)
-                            .padding(75)
+                            .frame(width: 100,height: 100)
                     }
-                    
                     
                 }
             }
